@@ -1,0 +1,62 @@
+- bikin crud provinsi
+1. nama table
+    -> provinces
+        -> id
+        -> name
+        -> created_at
+        -> updated_at
+        -> deleted_at
+
+2. setiap kali delete data hannya menambahkan flag menggunakan soft delete
+
+
+/............................................./
+
+- bikin crud city
+1. nama table
+    -> cities
+        -> id
+        -> name
+        -> province_id
+        -> created_at
+        -> updated_at
+        -> deleted_at
+
+2. setiap kali create new data harus pilih provincenya
+3. setiap kali delete data hannya menambahkan flag menggunakan soft delete
+
+/.........................................../
+
+- bikin crud district
+1. nama table
+    -> districts
+        -> id
+        -> name
+        -> province_id
+        -> city_id
+        -> created_at
+        -> updated_at
+        -> deleted_at
+2. setiap kali create new data harus pilih provicenya dulu
+3. setiap kali create new data harus pilih citynya juga yang berkaitan dengan provice yang dipilih
+4. setiap kali delete data hannya menambahkan flag menggunakan soft delete
+
+/............................................/
+
+- bikin crud subdistrict
+1. nama table
+    -> subdistricts
+        -> id
+        -> name
+        -> postal_code
+        -> province_id
+        -> city_id
+        -> district_id
+        -> created_at
+        -> updated_at
+        -> deleted_at
+
+2. setiap kali create new data harus pilih provicenya dulu
+3. setiap kali create new data harus pilih citynya juga yang berkaitan dengan provice yang dipilih
+4. setiap kali create new data harus pilih districtnya juga yang berkaitan dengan provice dan city yang dipilih
+5. setiap kali delete data hannya menambahkan flag menggunakan soft delete
